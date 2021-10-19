@@ -11,3 +11,4 @@
   * [JavaScript Project Architecture](project-architecture/javascript-project-architecture.md)
 * [JavaScript 기초](javascript/README.md)
   * [DOM Tree](javascript/dom-tree.md)
+  * [getElementsByName](javascript/getelementsbyname.md)
