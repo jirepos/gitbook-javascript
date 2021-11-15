@@ -1,5 +1,16 @@
 # JavaScript Class
 
+## 지원 브라우저
+
+- Chrome
+- Edge
+- Firefox
+- safari iOS
+- Node.js
+- Chrome Android
+- Safari
+
+
 ## 기본 구조 
 ```html
 <!DOCTYPE html>
