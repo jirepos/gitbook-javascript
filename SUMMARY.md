@@ -19,6 +19,7 @@
 * [map 함수](016-map-function.md)
 * [객체 리터럴](017-object-literal.md)
 * [Arrow Function](018-arrow-function.md)
+* [bit 연산](019-bit-operation.md)
 * [Project Architecture](project-architecture/README.md)
   * [JavaScript Project Architecture](project-architecture/javascript-project-architecture.md)
 * [JavaScript 기초](javascript/README.md)
