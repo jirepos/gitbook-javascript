@@ -163,3 +163,12 @@ import newName, { add } from './lib.js'
 console.log(newName)
 console.log(add(1,2)
 ```
+
+
+## 바인딩 없이 모듈만 실행하기
+단순히 특정 모듈을 불러와 실행만 할 목적이라면, import만 사용하는 것이 좋다.
+
+```jsx
+import "my-module.js";
+```
+
