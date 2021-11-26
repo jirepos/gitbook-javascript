@@ -22,6 +22,8 @@
 * [bit 연산](019-bit-operation.md)
 * [즉시 실행함수](020-iif.md)
 * [CommonJS와 AMD의 모듈화](021-amd-commonjs.md)
+* [배열 함수 (forEach)](022-foreach.md)
+* [CSS 선택자와 querySelectorALl](023-query-selector.md)
 * [Project Architecture](project-architecture/README.md)
   * [JavaScript Project Architecture](project-architecture/javascript-project-architecture.md)
 * [JavaScript 기초](javascript/README.md)
