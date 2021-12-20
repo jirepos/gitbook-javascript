@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Initial page](README.md)
+* [Gitbook 간단 정리](README.md)
 * [Async and Await](001-async-and-await.md)
 * [context](002-context.md)
 * [Module](003-module.md)
