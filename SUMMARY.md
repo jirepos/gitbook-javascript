@@ -13,6 +13,7 @@
 * [PostMessage](010-post-message.md)
 * [MessageChannel](011-message-channel.md)
 * [Destructuring](012-destructuring.md)
+* [Spread와 rest 사용](024-spread-rest.md)
 * [TypeScript](013-typescript.md)
   * [(1) 설치](./typescript/01-typescript-install.md)
   * [(2) Type Annotation](./typescript/02-typescript-type-annot.md)
