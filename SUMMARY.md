@@ -1,6 +1,5 @@
 # Table of contents
 
-* [Gitbook 간단 정리](README.md)
 * [Async and Await](001-async-and-await.md)
 * [context](002-context.md)
 * [Module](003-module.md)
@@ -48,7 +47,3 @@
   * [JavaScript Function](javascript/011-javascript-function.md)
   * [ES6 객체 리터럴](javascript/012-es6.md)
 
-
-
-
-* 

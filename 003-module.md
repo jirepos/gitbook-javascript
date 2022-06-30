@@ -1,5 +1,20 @@
 # Module
 
+## Syntax
+```jsx
+import defaultExport from "module-name";
+import * as name from "module-name";
+import { export1 } from "module-name";
+import { export1 as alias1 } from "module-name";
+import { export1 , export2 } from "module-name";
+import { export1 , export2 as alias2 , [...] } from "module-name";
+import defaultExport, { export1 [ , [...] ] } from "module-name";
+import defaultExport, * as name from "module-name";
+import "module-name";
+var promise = import("module-name");
+```
+
+
 ## 프로젝트 구조
 
 ```
@@ -30,15 +45,18 @@ lib.js에 name 변수를 정의한다.
 
 ```javascript
 // lib.js
-export default { 
+// 기본 내보내기 
+export default {  
   name: "Latte"
 }
 ```
 
-default로 export한 것은 임으로 이름을 정의할 수 있다. lib.name과 같이 사용한다.
+
+**default로 export한 것은 임으로 이름을 정의할 수 있다**. lib.name과 같이 사용한다.
 
 ```javascript
 // index.js
+// default는 이름을 마음대로 정할 수 있다. 
 import lib from './lib.js'
 console.log(lib.name)
 ```
@@ -130,6 +148,7 @@ let calc = {
     return a * b
   }
 }
+// moduleName은 default로 내보내고 
 export { moduleName as default , add, calc}
 ```
 
@@ -166,9 +185,77 @@ console.log(add(1,2)
 
 
 ## 바인딩 없이 모듈만 실행하기
-단순히 특정 모듈을 불러와 실행만 할 목적이라면, import만 사용하는 것이 좋다.
+단순히 특정 모듈을 불러와 실행만 할 목적이라면, import만 사용하는 것이 좋다. 어떠한 바인딩 없이 모듈 전체의 사이드 이펙트만 가져온다. 
 
 ```jsx
-import "my-module.js";
+import "mymodule.js";
 ```
+
+
+mymodule.js에 다음과 같이 정의되어 있다고 가정한다. 
+```jsx
+funtion hello() { 
+  console.log();
+}
+
+console.log("start"); 
+```
+
+이 모듈을 다음과 같이 모듈을 import 하면 
+```jsx
+import "mymodule.js";
+```
+모듈의 console.log("start")는 실행하지만, hello() 함수는 가져오지 않는다. 즉, 모듈의 전역 코드를 실행하지만 아무것도 가져오지 않는다. 
+
+> Import an entire module for side effects only, without importing anything. This runs the module's global code, but doesn't actually import any values.
+
+
+
+다음은 이름이 없다고 에러가 출력된다. 
+```jsx
+import "mymodule.js"; 
+
+hello();  // 가져오지 않기 때문에 오류가 발생한다. 
+
+```
+이것은 동적 가져 오기 에서도 작동 한다. 
+
+```jsx
+(async () => {
+  if (somethingIsTrue) {
+    // 부작용을위한 모듈 가져 오기
+    await import('/modules/my-module.js');
+  }
+})();
+```
+
+
+## 동적 가져오기 
+
+
+
+```jsx
+  import('/modules/my-module.js')
+      .then(module => {
+        module.loadPageInto(main);
+      })
+      .catch(err => {
+        main.textContent = err.message;
+      });
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
